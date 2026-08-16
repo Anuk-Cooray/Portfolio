@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuk Cooray | Business Analyst & Associate Project Manager</title>
+  <meta name="description" content="Personal Portfolio of Anuk Cooray - Business Analyst & Associate Project Manager | IT Undergraduate. Bridging business vision and technical execution through Agile methodologies and data-driven analysis.">
+  <meta name="keywords" content="Anuk Cooray, Business Analyst, Project Manager, Agile, Scrum, SLIIT, Arimac Digital, Trello, Confluence, Playwright, IT Undergraduate, Portfolio">
+  <meta name="author" content="Anuk Cooray">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anuk Cooray | Business Analyst & Associate Project Manager">
+  <meta property="og:description" content="Bridging business vision and technical execution through Agile methodologies, data-driven analysis, and process optimization.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- Interactive Particle/Constellation Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Anuk Cooray Home">
+        <div class="logo-badge">AC</div>
+        <span>Anuk<span class="text-gradient">.dev</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Actions -->
+      <div class="nav-actions">
+        <button class="nav-cta" id="btn-open-cv-nav" aria-label="View and Download CV">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:4px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          CV / Resume
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Me</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Core Competencies</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Featured Projects</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience & Education</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      <li style="margin-top: 1rem;">
+        <button class="btn btn-primary" id="btn-open-cv-mobile" style="width: 100%;">
+          View & Download CV
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Text & CTA Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-status-wrap">
+            <div class="badge badge-emerald">
+              <span class="pulse-dot"></span>
+              Available for Opportunities
+            </div>
+            <span class="badge">Colombo, Sri Lanka</span>
+          </div>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="text-gradient">Anuk Cooray</span>
+          </h1>
+
+          <div class="hero-title">
+            <span>Business Analyst</span>
+            <span style="color: var(--text-muted);">•</span>
+            <span>Associate Project Manager</span>
+          </div>
+
+          <p class="hero-tagline">
+            "Bridging business vision and technical execution through Agile methodologies, data-driven analysis, and process optimization."
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              View Projects
+            </a>
+            
+            <button class="btn btn-secondary" id="btn-open-cv-hero">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              Download CV
+            </button>
+
+            <a href="#contact" class="btn btn-outline">
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social-group">
+            <span class="social-label">Connect:</span>
+            <div class="social-icons-row">
+              <a href="https://linkedin.com/in/anuk-cooray" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/>
+                </svg>
+              </a>
+
+              <a href="https://github.com/Anuk-Cooray" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub Profile" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2Z"/>
+                </svg>
+              </a>
+
+              <a href="mailto:indeepac@gmail.com" class="btn-icon" aria-label="Direct Email" title="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Avatar & Visual Interactive Card -->
+        <div class="hero-visual reveal-on-scroll delay-2">
+          <div class="hero-card-wrapper">
+            
+            <!-- Floating Pill 1 -->
+            <div class="floating-stat-pill floating-stat-1">
+              <div class="stat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-text-title">Methodology</div>
+                <div class="stat-text-val">Agile / Scrum</div>
+              </div>
+            </div>
+
+            <!-- Main Profile Card -->
+            <div class="hero-avatar-card glass-card">
+              <div class="avatar-halo-ring">
+                <div class="avatar-inner">
+                  <img src="assets/profile.jpg" alt="Anuk Cooray - Profile Photo" class="avatar-img" />
+                </div>
+              </div>
+
+              <h2 class="hero-card-name">Anuk Cooray</h2>
+              <div class="hero-card-role">IT Undergraduate @ SLIIT</div>
+
+              <div class="hero-mini-badges">
+                <span class="mini-badge">Agile / Scrum</span>
+                <span class="mini-badge">Trello & Confluence</span>
+                <span class="mini-badge">SQL</span>
+                <span class="mini-badge">Playwright</span>
+              </div>
+            </div>
+
+            <!-- Floating Pill 2 -->
+            <div class="floating-stat-pill floating-stat-2">
+              <div class="stat-icon-wrap emerald">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="stat-text-title">Experience</div>
+                <div class="stat-text-val">Arimac Digital</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. ABOUT ME SECTION
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Overview
+        </span>
+        <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+        <p class="section-subtitle">A blend of business acumen, analytical rigor, and technical curiosity driving impactful software delivery.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Narrative Column -->
+        <div class="about-narrative reveal-on-scroll delay-1">
+          <p>
+            I am an <strong>Information Technology undergraduate at SLIIT</strong> with hands-on industry experience as a <strong>Trainee in Business Analysis & Project Management at Arimac Digital</strong>. My passion lies in understanding complex business challenges and translating them into streamlined, scalable software solutions.
+          </p>
+          <p>
+            With a strong foundation in both <strong>Agile frameworks</strong> and <strong>technical toolkits</strong> (including SQL, test automation with Playwright, and full-stack fundamentals), I actively bridge the gap between clients, product managers, and engineering teams.
+          </p>
+          <p>
+            Whether facilitating sprint ceremonies, modeling BPMN workflows, drafting comprehensive SRS documentation, or validating software quality through test automation, my focus is always on delivering measurable business value with speed and precision.
+          </p>
+        </div>
+
+        <!-- 4 Pillars Grid -->
+        <div class="about-stats-grid reveal-on-scroll delay-2">
+          
+          <div class="glass-card about-stat-card">
+            <div class="about-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="about-stat-title">Agile Delivery</div>
+            <div class="about-stat-desc">Sprint facilitation, backlog refinement, user story writing, and milestone tracking.</div>
+          </div>
+
+          <div class="glass-card about-stat-card">
+            <div class="about-stat-icon" style="color: var(--accent-blue); background: rgba(59, 130, 246, 0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="about-stat-title">Requirements Eng.</div>
+            <div class="about-stat-desc">BPMN process flows, SRS specification, gap analysis, and wireframe prototyping.</div>
+          </div>
+
+          <div class="glass-card about-stat-card">
+            <div class="about-stat-icon" style="color: var(--accent-emerald); background: rgba(16, 185, 129, 0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="about-stat-title">QA & Automation</div>
+            <div class="about-stat-desc">E2E test automation using Playwright TypeScript, regression testing, and CI/CD validation.</div>
+          </div>
+
+          <div class="glass-card about-stat-card">
+            <div class="about-stat-icon" style="color: #a855f7; background: rgba(168, 85, 247, 0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="about-stat-title">Stakeholder Mgmt</div>
+            <div class="about-stat-desc">Fostering transparent communication between business executives and dev teams.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. CORE COMPETENCIES & SKILLS GRID
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          Capabilities
+        </span>
+        <h2 class="section-title">Core <span class="text-gradient">Competencies</span></h2>
+        <p class="section-subtitle">A balanced fusion of strategic business analysis frameworks and modern technical tools.</p>
+      </div>
+
+      <div class="skills-container-grid">
+        
+        <!-- Category 1: Business Analysis & Management -->
+        <div class="glass-card skills-category-card reveal-on-scroll delay-1">
+          <div class="category-card-header">
+            <div class="category-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="category-card-title">Business Analysis & Management</h3>
+              <p class="category-card-subtitle">Methodologies, Elicitation & Project Delivery</p>
+            </div>
+          </div>
+
+          <div class="skill-chips-grid">
+            <span class="skill-chip">Agile / Scrum</span>
+            <span class="skill-chip">Requirements Elicitation</span>
+            <span class="skill-chip">User Stories & Epics</span>
+            <span class="skill-chip">Trello & Confluence</span>
+            <span class="skill-chip">MS Teams</span>
+            <span class="skill-chip">BPMN & Process Mapping</span>
+            <span class="skill-chip">Wireframing (Figma)</span>
+            <span class="skill-chip">Sprint Planning</span>
+            <span class="skill-chip">Acceptance Criteria</span>
+            <span class="skill-chip">Risk Assessment</span>
+            <span class="skill-chip">Stakeholder Alignment</span>
+          </div>
+
+          <!-- Proficiency Metrics -->
+          <div class="skill-progress-list">
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>Agile / Scrum & Sprint Facilitation</span>
+                <span class="text-gradient">95%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>Requirement Modeling & SRS</span>
+                <span class="text-gradient">90%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>Trello, Confluence & Backlog Mgmt</span>
+                <span class="text-gradient">92%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Technical & Data Toolkit -->
+        <div class="glass-card skills-category-card reveal-on-scroll delay-2">
+          <div class="category-card-header">
+            <div class="category-icon-box emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h3 class="category-card-title">Technical & Data Toolkit</h3>
+              <p class="category-card-subtitle">Databases, Automation & Engineering Stack</p>
+            </div>
+          </div>
+
+          <div class="skill-chips-grid">
+            <span class="skill-chip emerald">SQL (PostgreSQL / MySQL)</span>
+            <span class="skill-chip emerald">Playwright Test Automation</span>
+            <span class="skill-chip emerald">TypeScript / JavaScript</span>
+            <span class="skill-chip emerald">MERN Stack Basics</span>
+            <span class="skill-chip emerald">Git & GitHub</span>
+            <span class="skill-chip emerald">RESTful APIs & Postman</span>
+            <span class="skill-chip emerald">System Architecture</span>
+            <span class="skill-chip emerald">CI/CD Pipeline Basics</span>
+            <span class="skill-chip emerald">Test Scenario Design</span>
+          </div>
+
+          <!-- Proficiency Metrics -->
+          <div class="skill-progress-list">
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>SQL & Data Analysis Queries</span>
+                <span style="color: var(--accent-emerald);">88%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill emerald" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>Playwright Test Automation & QA</span>
+                <span style="color: var(--accent-emerald);">85%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill emerald" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-meta">
+                <span>System Architecture & API Design</span>
+                <span style="color: var(--accent-emerald);">82%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill emerald" style="width: 82%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. FEATURED PROJECTS SHOWCASE
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          Portfolio Work
+        </span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="section-subtitle">Showcasing end-to-end project management, system analysis, test automation, and full-stack development.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1: Campus Connect -->
+        <article class="project-card reveal-on-scroll delay-1" data-project-id="campus-connect">
+          <div class="project-card-banner">
+            <div class="project-card-banner-bg" style="background: linear-gradient(135deg, #1e3a8a, #0f172a);">
+              <!-- Abstract Canvas Illustration -->
+              <svg width="100%" height="100%" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.35;">
+                <circle cx="150" cy="90" r="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <circle cx="150" cy="90" r="30" stroke="#3b82f6" stroke-width="2"/>
+                <line x1="90" y1="90" x2="210" y2="90" stroke="#38bdf8" stroke-width="1.5"/>
+                <line x1="150" y1="30" x2="150" y2="150" stroke="#38bdf8" stroke-width="1.5"/>
+                <circle cx="90" cy="90" r="5" fill="#38bdf8"/>
+                <circle cx="210" cy="90" r="5" fill="#38bdf8"/>
+                <circle cx="150" cy="30" r="5" fill="#38bdf8"/>
+                <circle cx="150" cy="150" r="5" fill="#38bdf8"/>
+              </svg>
+            </div>
+            <div class="project-banner-overlay"></div>
+            <span class="project-type-tag">Management & BA</span>
+          </div>
+
+          <div class="project-card-body">
+            <span class="project-role-badge">Lead Business Analyst & Associate PM</span>
+            <h3 class="project-card-title">Campus Connect</h3>
+            <p class="project-card-desc">
+              Unified digital ecosystem streamlining campus operational workflows, student event logistics, and multi-department collaboration.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Agile / Scrum</span>
+              <span class="project-tag">Trello</span>
+              <span class="project-tag">BPMN 2.0</span>
+              <span class="project-tag">Figma</span>
+              <span class="project-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <span class="project-cta-link">
+              View Case Study
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+            <span class="mini-badge">System Analysis</span>
+          </div>
+        </article>
+
+        <!-- Project 2: SwiftTranslator Automation Suite -->
+        <article class="project-card reveal-on-scroll delay-2" data-project-id="swift-translator">
+          <div class="project-card-banner">
+            <div class="project-card-banner-bg" style="background: linear-gradient(135deg, #064e3b, #0f172a);">
+              <!-- Abstract QA/Automation Illustration -->
+              <svg width="100%" height="100%" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.35;">
+                <rect x="70" y="40" width="160" height="100" rx="8" stroke="#10b981" stroke-width="1.5"/>
+                <path d="M100 80L125 105L190 60" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="70" y1="65" x2="230" y2="65" stroke="#10b981" stroke-width="1"/>
+                <circle cx="85" cy="52" r="3" fill="#ef4444"/>
+                <circle cx="95" cy="52" r="3" fill="#f59e0b"/>
+                <circle cx="105" cy="52" r="3" fill="#10b981"/>
+              </svg>
+            </div>
+            <div class="project-banner-overlay"></div>
+            <span class="project-type-tag" style="color: #34d399;">Test Automation & QA</span>
+          </div>
+
+          <div class="project-card-body">
+            <span class="project-role-badge">QA Automation Engineer & Analyst</span>
+            <h3 class="project-card-title">SwiftTranslator Automation Suite</h3>
+            <p class="project-card-desc">
+              Comprehensive end-to-end test automation framework executing regression test runs across multiple linguistic translation flows with 98% coverage.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">Playwright</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">CI/CD Actions</span>
+              <span class="project-tag">HTML Reports</span>
+              <span class="project-tag">QA</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <span class="project-cta-link">
+              View Case Study
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+            <span class="mini-badge">Automation</span>
+          </div>
+        </article>
+
+        <!-- Project 3: Fashion Fiesta -->
+        <article class="project-card reveal-on-scroll delay-3" data-project-id="fashion-fiesta">
+          <div class="project-card-banner">
+            <div class="project-card-banner-bg" style="background: linear-gradient(135deg, #431407, #0f172a);">
+              <!-- Abstract Full-stack Illustration -->
+              <svg width="100%" height="100%" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.35;">
+                <rect x="60" y="35" width="180" height="110" rx="6" stroke="#f97316" stroke-width="1.5"/>
+                <rect x="75" y="55" width="45" height="35" rx="3" fill="#f97316" fill-opacity="0.3"/>
+                <rect x="130" y="55" width="45" height="35" rx="3" fill="#f97316" fill-opacity="0.3"/>
+                <rect x="185" y="55" width="40" height="35" rx="3" fill="#f97316" fill-opacity="0.3"/>
+                <line x1="75" y1="110" x2="225" y2="110" stroke="#f97316" stroke-width="1.5"/>
+                <line x1="75" y1="125" x2="160" y2="125" stroke="#f97316" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="project-banner-overlay"></div>
+            <span class="project-type-tag" style="color: #fb923c;">Full-Stack Web</span>
+          </div>
+
+          <div class="project-card-body">
+            <span class="project-role-badge">Full-Stack Developer & Analyst</span>
+            <h3 class="project-card-title">Fashion Fiesta</h3>
+            <p class="project-card-desc">
+              High-converting e-commerce web platform engineered with the MERN stack, featuring dynamic product filtering, secure checkout, and analytics.
+            </p>
+
+            <div class="project-tags">
+              <span class="project-tag">React.js</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <span class="project-cta-link">
+              View Case Study
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+            <span class="mini-badge">MERN Stack</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. EXPERIENCE & EDUCATION TIMELINE
+       ========================================================================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          Journey
+        </span>
+        <h2 class="section-title">Experience & <span class="text-gradient">Education</span></h2>
+        <p class="section-subtitle">Academic foundations and industry milestones shaping my professional growth.</p>
+      </div>
+
+      <div class="timeline-section-wrap">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-items-list">
+          
+          <!-- Experience 1: Arimac Digital -->
+          <div class="timeline-item active-item reveal-on-scroll delay-1">
+            <div class="timeline-node"></div>
+            
+            <div class="glass-card timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Trainee – Business Analysis & Project Management</h3>
+                  <div class="timeline-org">Arimac Digital</div>
+                </div>
+                <div class="timeline-period">Nov 2023 – Present</div>
+              </div>
+
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet-item">
+                  Participated in requirement elicitation workshops with stakeholders, converting client objectives into detailed SRS and Agile user stories.
+                </li>
+                <li class="timeline-bullet-item">
+                  Facilitated Scrum ceremonies including daily stand-ups, sprint planning, and backlog refinement sessions using Trello, Confluence, and MS Teams.
+                </li>
+                <li class="timeline-bullet-item">
+                  Modeled BPMN 2.0 process flowcharts and created UI/UX low-fidelity wireframes in Figma to align business needs with software architecture.
+                </li>
+                <li class="timeline-bullet-item">
+                  Assisted in User Acceptance Testing (UAT) and coordinated cross-functional communication between engineering, design, and client teams.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education 1: SLIIT -->
+          <div class="timeline-item reveal-on-scroll delay-2">
+            <div class="timeline-node"></div>
+            
+            <div class="glass-card timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">BSc (Hons) in Information Technology</h3>
+                  <div class="timeline-org">Sri Lanka Institute of Information Technology (SLIIT)</div>
+                </div>
+                <div class="timeline-period">2022 – Present</div>
+              </div>
+
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet-item">
+                  Comprehensive academic focus on Software Engineering, IT Project Management, Database Systems (SQL), Data Structures, and Enterprise Applications.
+                </li>
+                <li class="timeline-bullet-item">
+                  Led university team projects in software analysis, system architecture design, and full-stack software development under Agile guidelines.
+                </li>
+                <li class="timeline-bullet-item">
+                  Developed automated testing scripts and CI/CD workflows for quality assurance and continuous deployment modules.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education 2: Isipathana College -->
+          <div class="timeline-item reveal-on-scroll delay-3">
+            <div class="timeline-node"></div>
+            
+            <div class="glass-card timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-role">Secondary Education</h3>
+                  <div class="timeline-org">Isipathana College – Colombo 05</div>
+                </div>
+                <div class="timeline-period">Completed</div>
+              </div>
+
+              <ul class="timeline-bullets">
+                <li class="timeline-bullet-item">
+                  Completed G.C.E. Advanced Level examinations in Information Technology / Commerce stream.
+                </li>
+                <li class="timeline-bullet-item">
+                  Active participation in school clubs, leadership activities, and technology societies.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CONTACT SECTION
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Get In Touch
+        </span>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-subtitle">Interested in collaborating, discussing opportunities, or learning more about my experience? Reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Direct Info Card -->
+        <div class="glass-card contact-info-card reveal-on-scroll delay-1">
+          <div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Contact Information</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+              Feel free to reach out directly via email or LinkedIn. I typically reply within 24 hours.
+            </p>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-meta-label">Email Address</div>
+              <a href="mailto:indeepac@gmail.com" class="contact-meta-value text-gradient" style="word-break: break-all;">
+                indeepac@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-meta-label">LinkedIn Profile</div>
+              <a href="https://linkedin.com/in/anuk-cooray" target="_blank" rel="noopener noreferrer" class="contact-meta-value">
+                linkedin.com/in/anuk-cooray
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2Z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-meta-label">GitHub Repository</div>
+              <a href="https://github.com/Anuk-Cooray" target="_blank" rel="noopener noreferrer" class="contact-meta-value">
+                github.com/Anuk-Cooray
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-meta-label">Location</div>
+              <div class="contact-meta-value">Colombo, Sri Lanka</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Validated Contact Form -->
+        <div class="glass-card contact-form-card reveal-on-scroll delay-2">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group" id="group-name">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Sarah Perera" required>
+              <span class="form-error-msg">Please enter your name.</span>
+            </div>
+
+            <div class="form-group" id="group-email">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="name@company.com" required>
+              <span class="form-error-msg">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group" id="group-subject">
+              <label for="contact-subject" class="form-label">Subject</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Project collaboration / Career opportunity" required>
+              <span class="form-error-msg">Please provide a subject.</span>
+            </div>
+
+            <div class="form-group" id="group-message">
+              <label for="contact-message" class="form-label">Your Message</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hello Anuk, I came across your portfolio and would like to connect regarding..." required></textarea>
+              <span class="form-error-msg">Please write a message (at least 10 characters).</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btn-submit-contact" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand-logo">
+        <div class="logo-badge" style="width:32px; height:32px; font-size:0.95rem;">AC</div>
+        <span>Anuk Cooray</span>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="current-year">2026</span> Anuk Cooray. All rights reserved. Designed with precision & modern web standards.
+      </p>
+
+      <div class="footer-social-links">
+        <a href="https://linkedin.com/in/anuk-cooray" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
+        </a>
+        <a href="https://github.com/Anuk-Cooray" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 14.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- =========================================================================
+       9. DYNAMIC CASE STUDY & CV MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 class="modal-title" id="modal-title">Project Case Study</h3>
+          <span class="modal-subtitle" id="modal-role">Role & Scope</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal-content-body">
+        <!-- Dynamically injected case study or CV content -->
+      </div>
+
+      <div class="modal-footer" id="modal-footer-actions">
+        <button class="btn btn-secondary" id="modal-btn-dismiss">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-message" role="status" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-emerald);">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-text">Message sent successfully!</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
